@@ -1,0 +1,77 @@
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "vendor/libs";
+@import "base/fonts";
+@import "base/general";
+@import "../blocks/modules";
+
+$color-dark: #212121;
+$light-color: #fff;
+
+h1,	h2, h3, h4, p {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+  // font-family: 'Roboto', sans-serif;
+}
+.wrap {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+.header{
+	&__logo {
+		color: $color-dark;
+		text-decoration: none;
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 22px;
+		padding: 50px 0 49px 0;	
+	}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1170px;
+	margin: 0 auto;
+	&-list {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 16px;
+		list-style-type: none;
+		display: flex;
+		justify-content: flex-end;
+		&__item {
+			margin-left: 22px;
+		}
+		&__link {
+			color: $color-dark;
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 22px;
+			letter-spacing: 1px;
+			text-decoration: none;
+		}
+	}
+}
+.block-image {
+	text-align: center;
+	// background-image: url()
+	// color: $light-color;
+	&__title {
+		display: block;
+		text-align: center;
+		font-size: 60px;
+		font-weight: 600;
+		line-height: 22px;
+		letter-spacing: 3px;
+	}
+	&__subtitle {
+		padding-top: 26px;
+		text-align: center;
+	}
+	&__button {
+		
+	}
+}
