@@ -27,7 +27,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	font-weight: 400;
-  // font-family: 'Roboto', sans-serif;
+  
 }
 .wrap {
 	max-width: 1170px;
@@ -59,6 +59,76 @@ body {
 	
 	}
 }
+.contacts-phone, .contacts-email {
+	color: $light-color;
+	text-decoration: none;
+}
+.form-contacts {	
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	text-align: center;
+} 
+
+.form {
+	display: flex;
+	width: 100%;
+	margin-top: 50px;
+	&__input {
+		display: block;
+		width: 100%;
+		min-width: 500px;
+		&_desc {
+			margin-top: 33px;
+		}
+		&_desc textarea {
+			color: gray;
+			font-size: 20px;
+			font-weight: 600;
+			width: 100%;	
+			min-height: 315px;
+			border-radius: 10px;
+			resize: none;
+			&::placeholder {
+				padding-left: 15px;
+				padding-top: 20px;
+				letter-spacing: 1.2px;
+			}
+				
+	}
+	}
+	&__input input {
+		width: 100%;
+		padding: 30px 0 ;
+		font-size: 20px;
+		font-weight: 600;
+		border-radius: 10px;
+		letter-spacing: 1.2px;
+	}
+	&__input input::placeholder {
+		padding-left: 15px;
+	}
+	&__input:first-child {
+		margin-right: 31px;
+	}
+	&__button {
+		padding: 20px 0; 
+		font-size: 20px;
+		color: $color-dark;
+		font-weight: 700;
+		width: 220px;
+		background-color: $light-color;
+		margin-top: 39px;
+		border-radius: 10px;
+		text-transform: uppercase;
+		display: block;
+		margin-left:  auto;
+	}	
+
+}
+
 .page {
 	width: 100%;
 	&_about {
@@ -107,6 +177,11 @@ body {
 		line-height: 1.5;
 		letter-spacing: 1.5px;
 		text-align: center;
+		position: relative;
+		z-index: 1;
+		&_light {
+			color: $light-color;
+		}	
 	}
 	&__desc {
 		color: $color-dark;
@@ -114,10 +189,18 @@ body {
 		line-height: 1.5;
 		letter-spacing: 1.5px;
 		text-align: center;
+		position: relative;
+		z-index: 1;
 		&_about {
 			width: 54%;
 			margin: 17px auto 0;
 			letter-spacing: 1.0px;
+		}
+		&_light {
+			color: $light-color;
+			width: 59%;
+			margin: 18px auto 0;
+			letter-spacing: 1.2px;
 		}
 	}	
 	&-btn {
@@ -159,8 +242,27 @@ body {
 			text-transform: none;
 		}
 	}
-	
+	&_contacts {
+		padding-bottom: 110px;
+		background-color: $color-dark;
+		background-image: url(../img/bg-contacts.jpg);
+		background-size: cover; 
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: $color-dark;
+			opacity: 0.95;
+			z-index: 0;
+		}	
+	}
 }
+
 .header{
 	&__logo {
 		color: $color-dark;
@@ -285,6 +387,10 @@ body {
 	justify-content: space-around;
 	text-align: center;
 	margin-top: 0;
+	&_contacts {
+		position: relative;
+		z-index: 1;
+	}
 }
 .block-our-services {
 	display: flex;
@@ -387,6 +493,9 @@ body {
 		font-size: 20px;
 		font-weight: 600;
 		letter-spacing: 1px;
+		&_contacts {
+			margin-top: 36px;
+		}
 	}
 	&__desc {
 		margin-top: 20px;
@@ -400,22 +509,36 @@ body {
 	&__img {
 		width: 62px;
 		min-height: 70px;	
-		& img {
-			// margin: auto;
-		}
 	}
 	&_contacts {
+		 color: $light-color; 
+		 display: flex;
+		 margin-top: 105px;
 		.block-items__img {
+			position: relative;
 			width: 105px;
 			height: 105px;
 			background-color: $bg-card-color;
 			border-radius: 50%;	
-			& img {
-				color: #fff;
+		.block-items__svg {
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 60px;
+				fill: $light-color;
 			}
 		}
 		
 	}
+	&_contacts:first-child {
+		padding-left: 55px;
+	}	
+	&_contacts:last-child {
+		padding-right: 55px;
+	}	
 }
 
 .block-gallery {
@@ -433,6 +556,7 @@ body {
 		.block-items__title {
 			margin-top: 31px;
 		}
+			
 		.block-items__desc {
 			margin-top: 12px;
 		}
@@ -540,6 +664,14 @@ body {
     line-height: 1.5;
     letter-spacing: 1px;
 	}
+}
+.footer {
+	padding: 21px 0;
+}
+.copyright {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	letter-spacing: 1.9px;
 }
 
 
