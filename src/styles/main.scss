@@ -105,9 +105,16 @@ body {
 			text-align: center;
 		}
 	}
+
 	@media (max-width: 576px) {
 		&__input {
 			min-width: 350px;
+			& input {
+				padding: 20px 0;
+			}
+			& textarea {
+				min-height: 250px;
+			}
 		}
 	}
 	@media (max-width: 450px) {
@@ -179,18 +186,28 @@ body {
 	&_about {
 		padding-top: 113px;
 		padding-bottom: 95px;
-	  
+		@media (max-width: 992px) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 	}
 	&_gray {
 		background-color: $bg-page-gray;
 		padding-top: 163px;
 		padding-bottom: 91px;
+		@media (max-width: 992px) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 		
 		&-blog {
 			background-color: $bg-page-gray;
 			padding-top: 114px;
 			padding-bottom: 125px;
-			
+			@media (max-width: 992px) {
+				padding-top: 50px;
+				padding-bottom: 50px;
+			}
 
 		}	
 		&-light {
@@ -198,7 +215,10 @@ body {
 			position: relative;
 			padding-top: 118px;
 			padding-bottom: 67px;
-			
+			@media (max-width: 992px) {
+				padding-top: 0;
+				padding-bottom: 50px;
+			}
 
 			.line {
 				position: absolute;
@@ -211,11 +231,19 @@ body {
 	}
 	&_our-team {
 		padding-top: 118px;
+		@media (max-width: 992px) {
+			padding-top: 0;
+		
+		}
 	}		
 	
 	&_latest-work {
 		padding-top: 116px;
 		padding-bottom: 135px;
+		@media (max-width: 992px) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 		
 	}
 	&__title {
@@ -255,6 +283,9 @@ body {
 			width: 59%;
 			margin: 18px auto 0;
 			letter-spacing: 1.2px;
+			@media (max-width: 450px) {
+				width: 100%;
+			}
 		}
 	}	
 	&-btn {
@@ -318,6 +349,10 @@ body {
 		background-image: url(../img/bg-contacts.jpg);
 		background-size: cover; 
 		position: relative;
+		@media (max-width: 992px) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 		&:after {
 			content: '';
 			position: absolute;
@@ -408,6 +443,9 @@ body {
 	justify-content: center;
 	list-style-type: none;
 	padding-top: 112px;
+	@media (max-width: 992px) {
+		padding-top: 50px;
+	}
 	@media (max-width: 768px) {
 		flex-direction: column;
 		align-items: center;
@@ -544,6 +582,9 @@ body {
 	flex-wrap: wrap;
 	text-align: center;
 	margin-top: 110px;
+	@media (max-width: 992px) {
+		margin-top: 50px;
+	}
 
 }
 .block-items { 
@@ -573,6 +614,12 @@ body {
 		flex-basis: 90%;
 		max-width: 290px;
 		padding-right: 10px;
+	}
+	@media (max-width: 450px) {
+		&:first-child {
+			padding-right: 0;
+		}
+		
 	}
 	
 	&_our-service {
@@ -608,6 +655,7 @@ body {
 		}
 		@media (max-width: 992px) {
 			flex-basis: 90%;
+			padding-bottom: 0;
 		}
 		@media (max-width: 576px) {
 			max-width: 100%;
@@ -733,6 +781,10 @@ body {
 	margin: auto;
 	list-style-type: none;
 	margin-top: 96px;
+	@media (max-width: 992px) {
+		margin-top: 0;
+		padding-bottom: 50px;
+	}
 	&>li {
 		margin: 0 5px;
 		
@@ -772,9 +824,20 @@ body {
 		align-items: center;
 		flex-basis: 45%;	
 	}
+	@media (max-width: 992px) {
+		padding-top: 50px;
+		&-button {
+			margin-top: 50px;
+		}
+	}
 	&_our-team {
 		padding-top: 122px;
 		padding-bottom: 123px;
+		@media (max-width: 992px) {
+			padding-top: 50px;
+			padding-bottom: 0;
+		}
+		
 		
 	}
 	&-item {
@@ -952,6 +1015,9 @@ body {
 		padding-top: 56px;
 		text-align: left;
 		margin-left: 5px;
+		@media (max-width: 375px) {
+			padding-top: 0;
+		}
 		&__title {
 			color: $color-dark;
 			font-size: 25px;
@@ -971,10 +1037,15 @@ body {
 		order: 6;
 		@media (max-width: 1200px) {
 			padding-right: 0;
+			margin-top: 0;
 		}
 		@media (max-width: 450px) {
 			margin-top: 50px;
 		}
+		@media (max-width: 375px) {
+			margin-top: 0;
+		}
+		
 	}	
 }
 .block-news {
@@ -1013,7 +1084,10 @@ body {
 		margin-top: 22px;
 		width: 85%;
     line-height: 1.5;
-    letter-spacing: 1px;
+		letter-spacing: 1px;
+		@media (max-width: 375px) {
+			width: 100%;
+		}
 	}
 }
 .footer {
