@@ -2,8 +2,7 @@ import "./import/modules";
 
 
 $(document).ready(function(){
-
-
+	
 	$('.open-button').click(function(){
 		$(this).toggleClass('open');
 	});
@@ -14,4 +13,9 @@ $(document).ready(function(){
 			$(".mobile-menu").toggleClass('open');
 	});
 
+	$('.header-list__link').click(function(){
+		$(".mobile-menu").removeClass('open');
+		$('.open-button').removeClass('open');
+	});
+ 
 });
